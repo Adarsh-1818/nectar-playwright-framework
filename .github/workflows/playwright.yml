@@ -10,6 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+
     steps:
       # Step 1: Checkout code
       - name: Checkout repository
@@ -40,3 +44,4 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
+

@@ -24,7 +24,7 @@ module.exports = defineConfig({
     video: 'retain-on-failure',
     trace: 'on-first-retry',
   
-    baseURL: process.env.BASE_URL,
+    baseURL: 'https://www.saucedemo.com',
   
     // 🔥 IMPORTANT FIX
     contextOptions: {

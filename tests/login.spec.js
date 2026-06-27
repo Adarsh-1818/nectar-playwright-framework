@@ -13,9 +13,9 @@ test.describe('Login Tests', () => {
             process.env.USERNAME,
             process.env.PASSWORD
 
-        );
-      
-        await expect(page.locator('.inventory_list')).toBeVisible();
+        );   
+        
+  await expect(page).toHaveURL(/inventory.html/);
       });
 
   test('@regression Invalid login should show error', async ({ page }) => {

@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/LoginPage');
+const { validUser } = require('../utils/testData');
 
 test.describe('Login Tests', () => {
 
@@ -9,11 +10,7 @@ test.describe('Login Tests', () => {
       
         await loginPage.goto();
       
-        await loginPage.login(
-            process.env.USERNAME,
-            process.env.PASSWORD
-
-        );
+        await loginPage.login(validUser.username, validUser.password);
       
         await expect(page.locator('.inventory_list')).toBeVisible();
       });

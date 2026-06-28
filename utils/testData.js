@@ -1,7 +1,7 @@
 module.exports = {
     validUser: {
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD
+      username: process.env.TEST_USERNAME || 'standard_user',
+      password: process.env.TEST_PASSWORD || 'secret_sauce',
     },
   
     invalidUser: {

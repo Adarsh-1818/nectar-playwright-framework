@@ -80,8 +80,9 @@ npx playwright show-report
 
 Create a .env file in the root:
 
-USERNAME=standard_user
-PASSWORD=secret_sauce
+TEST_USERNAME=standard_user
+TEST_PASSWORD=secret_sauce
+BASE_URL=https://www.saucedemo.com
 
 
 📊 Key Learning Outcomes

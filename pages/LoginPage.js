@@ -16,16 +16,10 @@ class LoginPage {
   
     // Perform login action
     async login(username, password) {
-        await this.page.goto('/');
-      
         await this.usernameInput.waitFor();
         await this.usernameInput.fill(username);
-      
         await this.passwordInput.fill(password);
-      
         await this.loginButton.click();
-    
-        await this.page.waitForTimeout(2000);
       }
   
     // Get error message text

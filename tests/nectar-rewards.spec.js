@@ -35,6 +35,7 @@ test('Validate Nectar rewards system after purchase', async ({ page }) => {
   const totalAmount = await nectarPage.getTotalAmount();
 
   await checkoutPage.completeOrder();
+  
   // Step 6: Calculate Nectar points
   const points = NectarCalculator.calculatePoints(totalAmount);
 
